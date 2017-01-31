@@ -1,0 +1,89 @@
+﻿@model Apcis.ViewModels.ActiviteVM
+@using Apcis.ViewModels
+@using Apcis.SiteLogic
+@using Apcis.Html
+@using Apcis.Models
+
+@{ 
+    ViewBag.IsDuplicationConstraint = ViewBag.IsDuplicationConstraint ?? false;
+    ViewBag.Validate = ViewBag.Validate ?? false;
+}
+
+@if (DropDowns.Poles == null || DropDowns.Prestations == null)
+{
+    <script>
+        location.reload();
+    </script>
+}
+
+<div id="updateAll">
+    <section id="leftBar"></section>
+    <section id="rightBar"></section>
+
+    <section id="top">
+        <div class="fillChildren">
+            <img class="logo" src="@Url.Content("~/Content/Images/logoBlocky.png")" />
+            <span class="logo"> </span>
+            <h3>Nouvelle Activite </h3>
+            <div>
+                @if (IsPost && Model.Entity.Nom != null)
+                {
+                    <h1>@Model.Entity.Nom</h1>
+
+                    @Html.ActionLink("Ecrire une description", "Description",
+                    new
+                    {
+                        controller = "ActiviteTerritoire",
+                        nom = Model.Entity.Nom,
+                       
+                    }, new { @class = "button" });
+            }
+            </div>
+        </div>
+        <footer>
+            @Html.Image(Url.Content("~/Content/images/h2long.png"))
+        </footer>
+    </section>
+
+    <br class="tinyBreak" />
+   
+    @if (!ViewBag.Validate)
+    {
+        @Html.Partial("NouvelleForm", Model);
+    }
+    else
+    {
+        if (ViewBag.IsDuplicationConstraint == true)
+        {
+            <p>already exists</p>
+            <p>do stuff</p>
+            <p>do other stuff</p>
+        }
+    }
+
+<footer>
+    @Html.Image(Url.Content("~/Content/images/h2long.png"))
+</footer>
+</div>
+
+@Scripts.Render("~/bundles/scripts")
+<script>
+
+    function ajaxRefresh(update) {
+        $("#updateAll").html(update);
+    }
+
+    function updatePrestation(jsPoleId) {
+
+        $.post("/Activites/_Nouvelle",
+            { prestationId: $("#prestations").val(), poleId: jsPoleId })
+            .success((data) => ajaxRefresh(data));
+    }
+
+    function updatePole() {
+        $.post("/Activites/_Nouvelle",
+           { prestationId: null, poleId: $("#poles").val() })
+           .success((data) => ajaxRefresh(data));
+    }
+
+</script>

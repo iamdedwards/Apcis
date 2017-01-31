@@ -1,0 +1,71 @@
+20/04/2016 11:37:48	Ce journal contient des informations sur l'importation du schéma dans le projet 'App' sur l'ordinateur 'BRIX' par l'utilisateur 'Dan'.
+20/04/2016 11:37:50	L'importation du schéma de base de données a commencé.
+20/04/2016 11:37:53	Collecte des connexions
+20/04/2016 11:40:11	Collecte des options de la base de données
+20/04/2016 11:40:11	Collecte des utilisateurs
+20/04/2016 11:40:11	Collecte des rôles
+20/04/2016 11:40:11	Collecte des rôles d'application
+20/04/2016 11:40:11	Collecte des appartenances aux rôles
+20/04/2016 11:40:11	Collecte des groupes de fichiers
+20/04/2016 11:40:11	Collecte des catalogues de recherche en texte intégral
+20/04/2016 11:40:11	Collecte des assemblys
+20/04/2016 11:40:11	Collecte des certificats
+20/04/2016 11:40:11	Collecte des schémas
+20/04/2016 11:40:11	Collecte des collections de schémas XML
+20/04/2016 11:40:11	Collecte des types de données définis par l'utilisateur
+20/04/2016 11:40:11	Collecte des types définis par l'utilisateur
+20/04/2016 11:40:11	Collecte des types de tables
+20/04/2016 11:40:11	Collecte des clés uniques des types de tables
+20/04/2016 11:40:11	Collecte des clés primaires pour les types de tables
+20/04/2016 11:40:11	Collecte d'index pour types de tables
+20/04/2016 11:40:11	Collecte des contraintes de validation pour les types de tables
+20/04/2016 11:40:12	Collecte des contraintes par défaut pour les types de tables
+20/04/2016 11:40:12	Collecte des fonctions de partition
+20/04/2016 11:40:12	Collecte des schémas de partition
+20/04/2016 11:40:12	Collecte des fonctions
+20/04/2016 11:40:12	Collecte de fonctions cryptées
+20/04/2016 11:40:12	Collecte des agrégats
+20/04/2016 11:40:12	Collecte des procédures
+20/04/2016 11:40:12	Collecte de procédures cryptées
+20/04/2016 11:40:12	Collecte des tables
+20/04/2016 11:40:13	Collecte des clés primaires
+20/04/2016 11:40:13	Collecte des contraintes uniques
+20/04/2016 11:40:13	Collecte des clés étrangères
+20/04/2016 11:40:13	Collecte des contraintes par défaut
+20/04/2016 11:40:13	Collecte des contraintes de validation
+20/04/2016 11:40:13	Collecte des vues
+20/04/2016 11:40:13	Collecte de vues cryptées
+20/04/2016 11:40:13	Collecte des index
+20/04/2016 11:40:13	Collecte des statistiques
+20/04/2016 11:40:13	Collecte des listes de mots vides d'index de recherche en texte intégral
+20/04/2016 11:40:13	Collecte des listes de propriétés de recherche
+20/04/2016 11:40:13	Collecte des propriétés de recherche
+20/04/2016 11:40:13	Collecte des index de recherche en texte intégral
+20/04/2016 11:40:13	Collecte des index de la banque de colonnes
+20/04/2016 11:40:13	Collecte des index spatiaux
+20/04/2016 11:40:13	Collecte des index XML
+20/04/2016 11:40:13	Collecte d'index XML sélectifs
+20/04/2016 11:40:14	Collecte de déclencheurs cryptés
+20/04/2016 11:40:14	Collecte des déclencheurs
+20/04/2016 11:40:14	Collecte des déclencheurs chiffrés et DDL CLR
+20/04/2016 11:40:14	Collecte des DDL triggers
+20/04/2016 11:40:14	Collecte des synonymes
+20/04/2016 11:40:14	Collecte des valeurs par défaut
+20/04/2016 11:40:14	Collecte des liaisons UDDT de contrainte de données
+20/04/2016 11:40:14	Collecte des règles
+20/04/2016 11:40:14	Collecte des liaisons UDDT de contrainte de données
+20/04/2016 11:40:14	Collecte des types de messages
+20/04/2016 11:40:14	Collecte des files d'attente
+20/04/2016 11:40:14	Collecte des contrats
+20/04/2016 11:40:14	Collecte des services
+20/04/2016 11:40:14	Collecte des notifications d'événements
+20/04/2016 11:40:14	Collecte des liaisons de service distant
+20/04/2016 11:40:14	Collecte des priorités de Service Broker
+20/04/2016 11:40:14	Collecte des signatures
+20/04/2016 11:40:14	Collection des options de compression de données
+20/04/2016 11:40:14	Collecte des types de séquences
+20/04/2016 11:40:14	Collection des propriétés étendues
+20/04/2016 11:40:16	Collecte des connexions
+20/04/2016 11:40:19	Importation de la base de données terminée.
+20/04/2016 11:40:19	Un résumé de l'opération d'importation a été enregistré à l'emplacement suivant : C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\Importer les journaux de schémas\App_20160420093748.log.
+20/04/2016 11:40:19	Cliquez sur Terminer pour continuer...

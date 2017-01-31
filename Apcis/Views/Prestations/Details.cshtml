@@ -1,0 +1,18 @@
+﻿@model Apcis.Models.Prestation
+@using Apcis.Html
+
+    <div class="inner">
+    <h4>La Prestation a été créé</h4>
+    <hr />
+
+        @Html.DisplayNameFor(model => model.Nom) : @Html.DisplayFor(model => model.Nom)  
+        @Html.DisplayNameFor(m => m.Pole) : @Html.DisplayFor(model => model.Pole.Nom)
+  
+    </div>
+    @Html.Button("Créer une activité pour cette prestation", new Dictionary<string, string>()
+    {
+      {"href", Url.Action("Nouvelle", "Activites", new { prestationId = Model.ID, poleId = Model.Pole.ID }) },
+    })
+
+       
+

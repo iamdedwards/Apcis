@@ -1,0 +1,26 @@
+﻿.icon {
+
+     font-family: FontAwesome !important;
+}
+
+.icon.style2 {
+	border-radius: 4px;
+	width: 3em;
+	height: 3em;
+	display: inline-block;
+	text-align: center;
+	line-height: 3em;
+	
+}
+
+.icon.buttonIcon{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.4em;
+}
+
+.label.buttonIcon {
+
+}
+    

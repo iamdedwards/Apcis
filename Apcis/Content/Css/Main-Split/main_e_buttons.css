@@ -1,0 +1,33 @@
+﻿.button {
+    
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    -webkit-transition: background-color 0.2s ease, border 0.2s ease;
+    -moz-transition: background-color 0.2s ease, border 0.2s ease;
+    -o-transition: background-color 0.2s ease, border 0.2s ease;
+    -ms-transition: background-color 0.2s ease, border 0.2s ease;
+    transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+
+
+.button {
+    font-family: walkway_ultraboldregular;     
+    cursor:pointer;	
+	border: 0;
+	display: inline-block;
+	font-size: 1em;
+	font-weight:200;
+	height: 3.5em;
+	letter-spacing: 0.35em;
+	line-height: 3.45em;
+	text-align: center;
+}
+
+.disabled {
+    pointer-events: none;
+	opacity: 0.5;
+}
+

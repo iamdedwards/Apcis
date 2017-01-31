@@ -1,0 +1,86 @@
+﻿@using Apcis.Html
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<br class="smallBreak" />
+<div class="inner logo">
+    @Html.Image(Url.Content("~/content/images/logoBlocky.png"))
+    <aside class="logo">
+        <p>Accueils <strong>//</strong> Préventions <strong>//</strong> Cultures </p>
+        <p>Intercommunautaire et Solidaire</p>
+    
+    </aside>
+</div>
+<br class="tinyBreak" />
+<div class="inner navBar">
+    <div class="inner body">
+        <nav class="contact shift25">
+            @Html.TwoElements(
+                 Html.IconButton(Icon.Get(Icon.ID.Telephone, "Téléphone")),
+                 Html.IconButton(Icon.Get(Icon.ID.Map, "Carte"))
+             )
+            @Html.TwoElements(
+                 Html.IconButton(Icon.Get(Icon.ID.Email, "Email")),
+                 Html.IconButton(Icon.Get(Icon.ID.Map, "Carte"))
+             )
+        </nav>
+        <div class="site">
+            @Html.ThreeElements(
+                Html.Button("Stains"),
+                Html.Button("Epinay"),
+                Html.Button("Bagnolet")
+            )
+        </div>
+    <hr />
+
+
+</div>
+    <br class="smallBreak" />
+    <div class="inner text">
+
+        <h1 class="easyRead">Nos valeurs</h1>
+
+        <div class="center">
+            <p class="bigger">
+                ce sont
+                <strong>l’entraide</strong>
+                et
+                <strong>la solidarité. </strong>
+            </p>
+            <hr />
+            <br class="tinyBreak" />
+        </div>
+
+        <p class="easyRead big">
+            Notre association qui revendique son appartenance au
+            mouvement de l’éducation populaire a une volonté de
+            <b>transformation sociale</b> et de
+            <b>disparition des inégalités.</b>
+
+        </p>
+        <p class="easyRead constrain">
+            Pour aider le quotidien des habitants, nous contribuons
+            à valoriser les compétences de chacun et à développer
+            l’échange de savoirs.
+        </p>
+        <p class="easyRead constrain">
+            Notre force, c’est notre capacité
+            à observer le vécu de la population, à être à l’écoute
+            de ses besoins et à trouver les moyens d’y répondre
+            en sollicitant les institutions et les financeurs
+            et monter des actions appropriées. Nos solutions
+            collent aux réalités des quartiers.
+        </p>
+
+        <div id="posts">
+
+
+        </div>
+
+    </div>
+</div>
+
+<footer>woah!</footer>

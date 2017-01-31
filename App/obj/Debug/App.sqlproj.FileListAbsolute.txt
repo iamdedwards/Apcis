@@ -1,0 +1,9 @@
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\bin\Debug\App.dacpac
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\bin\Debug\App.dll
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\bin\Debug\App.pdb
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\obj\Debug\Model.xml
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\obj\Debug\refactor.xml
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\obj\Debug\postdeploy.sql
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\obj\Debug\predeploy.sql
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\obj\Debug\App.dll
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\App\obj\Debug\App.pdb

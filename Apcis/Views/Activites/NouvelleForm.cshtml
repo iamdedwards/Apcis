@@ -1,0 +1,41 @@
+﻿@model Apcis.ViewModels.ActiviteVM
+@using Apcis.SiteLogic
+@using Apcis.Html;
+
+<section class="inner">
+    <div class="dropdown">
+        <span>Pole </span>
+        @Html.DropDownList(nameof(Model.PoleId), DropDowns.Poles, new { onChange = "updatePole()", id = "poles" })
+    </div>
+    <br class="smallBreak" />
+
+    <div class="dropdown">
+        <span>Prestation </span>
+        @Html.DropDownList(nameof(Model.Entity.PrestationID), DropDowns.Prestations,
+            new { onChange = string.Format("updatePrestation({0})", Model.PoleId), id = "prestations" })
+    </div>
+
+
+
+    @using (Html.BeginForm("Nouvelle", "Activites"))
+            {
+        <div class="checkboxes">
+            <span>Territoires</span>
+            <div>
+                @Html.CheckBoxes(Model.TerritoireJoins, nameof(Model.TerritoireJoins));
+            </div>
+        </div>
+                <br class="Break" />
+
+                @Html.HiddenFor(m => m.Entity.PrestationID)
+                <div class="input">
+                    <span>Nom</span>
+                    @Html.Input(m => m.Entity.Nom, "Nom de la nouvelle activité")
+                </div>
+                <br class="tinyBreak" />
+
+                <div class="formSubmit">
+                    @Html.Submit("Envoyer!")
+                </div>
+    }
+</section>

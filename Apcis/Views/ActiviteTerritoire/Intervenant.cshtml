@@ -1,0 +1,14 @@
+﻿@model Apcis.ViewModels.IntervenantVM
+@{
+    ViewBag.Title = "Intervenant";
+}
+
+<h2>Intervenant</h2>
+
+@Html.EditorFor(m => m.Entity.Prenom)
+@Html.EditorFor(m => m.Entity.Nom)
+@Html.EditorFor(m => m.Entity.Profession)
+@Html.EditorFor(m => m.Entity.Role)
+@Html.EditorFor(m => m.Entity.Volontariat)
+
+@{ var x = new List<int>();}

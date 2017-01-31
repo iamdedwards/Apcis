@@ -1,0 +1,29 @@
+﻿* {
+    margin:0;
+    padding:0;
+}
+
+li { 
+    list-style-type: none; 
+}
+
+* { 
+    text-decoration: none; 
+}
+
+select { 
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+
+}
+
+.icon > .label  {display: none; }
+
+select ::-ms-expand {
+            display:none; 
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+}

@@ -1,0 +1,17 @@
+﻿
+@using Apcis.Html
+@model Apcis.ViewModels.JourEtHeureVM
+
+@{
+    var opts = new AjaxOptions() { Url = "/PrestationTerritoire/AddCreated", HttpMethod = "Post" };
+}
+
+@using (Ajax.BeginForm(opts))
+{
+    @Html.EditorFor(m => m.Entity.Jour);
+    @Html.EditorFor(m => m.Entity.Debut);
+    @Html.EditorFor(m => m.Entity.Fin);
+    @Html.Submit("ok");
+}
+
+

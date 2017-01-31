@@ -1,0 +1,35 @@
+﻿@using Apcis.Models
+@model Apcis.ViewModels.SelectRelationsViewModel<Prestation>
+
+<div id="activites">
+  
+</div>
+   
+    
+        <button value="hey!" onclick="go"></button>
+@Html.DropDownListFor(vm => vm.Selections[typeof(Pole)].Key, Model.Selections[typeof(Pole)].Value)
+
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
+@section scripts{
+    <script>
+        var updateOptions = 
+        { 
+            url : '/Prestations/_createActivite', 
+            domTarget: "#activites",
+            antiForgeryHeader: '@Html.GetAntiForgeryHeader()'
+        };
+
+        apcis.updatePage(updateOptions);
+     
+
+    </script>
+}
+

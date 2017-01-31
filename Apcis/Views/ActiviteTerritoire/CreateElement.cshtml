@@ -1,0 +1,75 @@
+﻿@model List<Apcis.ViewModels.ActiviteElementVM>
+@using Apcis.Html;
+@using Apcis.SiteLogic;
+
+@{var opts = new AjaxOptions() { Url = "/ActiviteTerritoire/AddCreated", HttpMethod = "Post", UpdateTargetId = "update" };
+
+    using (Ajax.BeginForm(opts))
+    {
+        foreach (var m in Model.Select((value, index) => new { value, index }))
+        {
+            var value = m.value;
+            var index = m.index;
+
+            var count = (int)ViewData["count"];
+
+            var ieme = ((Model.ElementAt(m.index).VMID == 1) ? "iere" : "ieme");
+
+            if (count > 1)
+            {
+                <div class="inline"><h4>@Model.ElementAt(m.index).VMID</h4>@ieme Element </div>
+            }
+            else
+            {
+                <div class="inline"><h4>Element Principale</h4>  </div>
+            }
+            @Html.Hidden("[{0}].{1}".AsFormat(index, nameof(value.VMID)))
+            @Html.Hidden("[{0}].Entity.{1}".AsFormat(index, nameof(value.Entity.ID)))
+            @Html.Hidden("[{0}].Entity.{1}".AsFormat(index, nameof(value.Entity.PrestationID)))
+            @Html.Hidden("[{0}].Entity.{1}".AsFormat(index, nameof(value.Entity.TerritoireID)))
+
+            if (Model.ElementAt(m.index).Entity.Description == null)
+            {
+                @Html.Editor(string.Format("[{0}].Entity.Description", m.index), Model[m.index].Entity.Description, new { id = "descBox" + m.value.VMID });
+                @Html.Input(get => get.ElementAt(m.index).Entity.Description, "Description");
+            }
+            else
+            {
+                <p>@m.value.Entity.Description</p>
+            }
+            <div class="dropdown-nested">
+            <span>
+                Pourcentage du temps Consacre a cette activite
+                @if (m.value.Entity.PourcentageDuTemps == 0)
+                {
+                    @Html.DropDownList("[{0}].Entity.{1}".AsFormat(index, value.Entity.PourcentageDuTemps), DropDowns.Numbers, new { id = "percList"+m.value.VMID });
+                }
+                else
+                {
+                    var percent = string.Format("{0} %", Model.ElementAt(m.index).Entity.PourcentageDuTemps);
+                    @percent;
+                }
+            </span>
+            </div>
+            var onclick = "{0}({1})".AsFormat(
+                   "setElement", //JavaScript Function Name
+                   Model.ElementAt(m.index).VMID); //Parametre To distinguish placement in lis); 
+
+                <button type="button" onclick=@onclick>GO!</button>
+            }
+            <input type="submit" class="small button" value="ok" />
+                    }
+
+                }
+
+<script>
+    alert("whaaaa");
+    function setElement(jsVmid)
+    {
+        alert($("#percList" + jsVmid).val());
+     
+
+        
+
+    }
+</script>

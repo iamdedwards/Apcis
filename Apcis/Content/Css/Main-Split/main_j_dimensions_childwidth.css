@@ -1,0 +1,31 @@
+﻿/*childWidth*/
+
+.holder  *{
+        
+        margin-right:1%;/*between*/
+        margin-bottom:1%;
+        float:left; 
+    }
+
+  
+ .childrenHalf *{
+
+        max-width:calc(50% - 5%);/*half*/
+        min-width:calc(50% - 5%);/*half*/
+    }
+
+   
+ .childrenQuarter *{
+        
+        width:calc(25% - 0.75%);/*quarter*/
+    }
+
+ .childrenThird *{
+
+        width:calc(33.33% - 0.75%);/*third*/
+    }
+
+ .lastChild {
+
+       margin-right: 0em;
+  }

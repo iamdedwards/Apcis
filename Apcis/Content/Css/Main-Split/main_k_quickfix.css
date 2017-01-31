@@ -1,0 +1,47 @@
+﻿ .upcase {
+            text-transform: uppercase;
+        }
+
+  .floatLeft
+  {
+      float:left;
+  }
+  .floatRight
+  {
+      float:right;
+  }
+
+ 
+  .floatNone
+  {
+      float:none;
+  }
+
+   .clearFloat
+  {
+      clear:both;
+  }
+   /* float */ 
+
+
+.margin-left
+  {
+      margin-left: 2%;
+  }
+
+  .margin-right
+  {
+      margin-right: 2%;
+  }
+
+  .break
+  {
+      margin-top:100px;
+      margin-bottom:10px;
+  }
+
+.smallBreak {
+    margin-top:50px;
+      margin-bottom:10px;
+}
+

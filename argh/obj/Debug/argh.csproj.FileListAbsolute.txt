@@ -1,0 +1,6 @@
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\argh\bin\Debug\argh.exe.config
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\argh\bin\Debug\argh.exe
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\argh\bin\Debug\argh.pdb
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\argh\obj\Debug\argh.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\argh\obj\Debug\argh.exe
+C:\Users\Dan\Documents\Visual Studio 2015\Projects\Apcis\argh\obj\Debug\argh.pdb

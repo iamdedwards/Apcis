@@ -1,0 +1,33 @@
+﻿  /*image and text*/
+  
+ 
+
+  .imageText span {
+      float : none; 
+  }
+
+  .imageText  {
+    float:left;
+  }
+
+  .imageText.MaxSized img {
+      max-width: 40%;
+      max-height: 40%;
+  }
+
+  .imageText.left img {
+      float:left;
+  }
+  
+  .imageText.right img {
+      float:right;
+  }
+
+  .imageText.center *{
+
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  /*image and text*/

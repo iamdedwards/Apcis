@@ -1,0 +1,87 @@
+﻿@model Apcis.ViewModels.PrestationVM
+@using Apcis.Models;
+@using Apcis.Html;
+@using Apcis.SiteLogic;
+@using Apcis.Resources;
+
+@{ 
+    var Validate = new Validate<Apcis.ViewModels.PrestationVM>();
+}
+
+
+
+
+<section id="leftBar"></section>
+<section id="rightBar"></section>
+<section id="top">
+    <div class="fillChildren">
+        <img clas="logo" src="@Url.Content("~/Content/Images/logoBlocky.png")" />
+        <div class="logo">
+        
+       @if (IsPost && Model.Entity != null)
+            {
+             <h1>@Model.Entity.Nom</h1>
+
+                @Html.ActionLink("New Activity", "Nouvelle", 
+               new { controller = "Activites", prestationId = Model.Entity.ID, poleId = Model.PoleId }, 
+               new { @class = "button" });
+            }
+        </div>
+
+    </div>
+        <footer>
+           @Html.Image(Url.Content("~/Content/images/h2long.png"))
+        </footer>
+</section>
+<hr />
+<br class="tinyBreak" />
+
+    <section id="formSection"><section id="formWrapper"><div class="inner">
+    @using (Html.BeginForm("Nouvelle", "Prestations"))
+    {
+        <h3>Nouvelle Prestation</h3>
+
+
+            <br class="tinyBreak" />
+            <div class="checkboxes">
+                <span>Territoires</span>
+                <div>
+                  
+                    @Html.CheckBoxes(Model.Joins, "Joins")
+                </div>
+
+            </div>
+
+            <br class="tinyBreak" />
+
+            <div class="dropdown">
+                <span>Pole </span>
+                @Html.DropDownListFor(m => m.PoleId, DropDowns.Default<Pole>("Choisir!"))
+
+            </div>
+
+                <div class="input">
+                    <span>Nom</span>
+
+                    @Html.Input(m => m.Entity.Nom, "Nom de la prestation")
+                    @Validate.RequiredFor(m => m.Nom)
+    
+                </div>
+                <br class="tinyBreak" />
+                <div class="formSubmit">@Html.Submit("ok")</div>
+    }
+</div>
+
+        </section>
+
+        <footer>
+            @Html.Image(Url.Content("~/Content/images/h2long.png"))
+
+        </footer>
+    </section>
+
+@section scripts{
+    
+    
+    }
+@*@Scripts.Render("~/bundles/scripts")*@

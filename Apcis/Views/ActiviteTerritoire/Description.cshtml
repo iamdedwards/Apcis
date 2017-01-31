@@ -1,0 +1,73 @@
+﻿@model Apcis.ViewModels.ActiviteTerritoireVM
+@using Apcis.Models;
+@using Apcis.Html;
+@using Apcis.SiteLogic;
+
+@if(DropDowns.Territoires == null)
+{
+    <script>location.reload()</script>
+}
+
+<div id="update">
+    <section id="leftBar"></section>
+    <section id="rightBar"></section>
+
+    <section id="top">
+
+
+        <div class="fillChildren">
+            <img clas="logo" src="@Url.Content("~/Content/Images/logoBlocky.png")" />
+
+
+        </div>
+        <footer>
+            @Html.Image(Url.Content("~/Content/images/h2long.png"))
+        </footer>
+    </section>
+
+    <br class="tinyBreak" />
+
+    <section class="inner">
+
+
+        @using (Html.BeginForm("Description", "ActiviteTerritoire"))
+        {
+
+            @Html.HiddenFor(m => m.Entity.ID)
+            @Html.HiddenFor(m => m.Entity.PrestationID)
+
+            <div class="dropdown">
+                <span>Territoire </span>
+                @Html.DropDownListFor(m => m.Entity.TerritoireID, DropDowns.Territoires)
+            </div>
+            <br class="smallBreak" />
+            <div class="input">
+                <span>Description Generale </span>
+                @Html.EditorFor(m => m.Entity.Nom)
+            </div>
+            <br class="smallBreak" />
+          
+            <div class="dropdown-nested">
+                <span>
+
+                    Cette activité consiste à
+                    @Html.DropDownListFor(m => m.Elements, DropDowns.SetNumbers(1, 10))
+                    elements
+                </span>
+
+
+                <input type="submit" class="icon button inline small center" value="">
+            </div>
+        }
+        
+    </section>
+
+    <footer>@Html.Image(Url.Content("~/Content/images/h2long.png"))</footer>
+
+
+</div>
+@section scripts{
+
+   
+}
+@*@Scripts.Render("~/bundles/scripts")*@

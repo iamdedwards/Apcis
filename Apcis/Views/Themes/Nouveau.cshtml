@@ -1,0 +1,11 @@
+﻿@model Apcis.ViewModels.ActiviteVM
+@using Apcis.Html
+
+@{ var opts = new AjaxOptions() { }; }
+@using (Ajax.BeginForm("Create", "Activites", opts))
+{
+    Html.Input(a => a.Activite.Nom, "Nom");
+    Html.Input(a => a.Activite.Description, "Description");
+    Html.Submit("ok!");
+}
+

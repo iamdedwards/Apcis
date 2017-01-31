@@ -1,0 +1,31 @@
+﻿@model IEnumerable<TerritoireVM>
+@using Apcis.ViewModels
+@using Apcis.Html
+
+
+
+<div>
+
+    @foreach (var t in Model)
+            {
+                var args = t.PrestationId + " , " + t.Entity.ID;
+                var attributes = new Dictionary<string, object>();
+                attributes.Add("id", t.Entity.Nom);
+                if (t.Joined)
+                {
+                    attributes.Add("checked", "checked");
+                }
+                attributes.Add("onclick", string.Format("updatePrestationTerritoire({0}, {1}, {2})", t.PrestationId, t.Entity.ID, t.Joined.ToString().ToLower()));
+
+
+        @Html.CheckBoxFor(value => t.Joined, attributes)
+        @Html.Label(t.Entity.Nom, new { @for = t.Entity.Nom })
+
+    }
+
+</div>
+
+@section scripts{
+    alert("thisWorks!")
+
+}

@@ -1,0 +1,13 @@
+﻿@using Apcis.Models
+@model Apcis.ViewModels.SelectRelationsViewModel<Prestation>
+
+@foreach (var item in Model.Target.Activites)
+{
+    @Html.EditorFor(x => item.Nom)
+    @Html.EditorFor(x => item.Description)
+   
+}
+<p>boop</p>
+
+
+

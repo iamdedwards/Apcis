@@ -1,0 +1,75 @@
+﻿input, select, textarea {
+
+	background-color: transparent;
+	border: none;
+	border-bottom: solid 2px #c9c9c9;
+	color: inherit;
+	display: block;
+	outline: 0;
+    width: 100%;
+}
+
+
+input, select {
+	height: 3em;
+}
+
+textarea {
+		
+	min-height: 3.75em;
+}
+    
+
+input[type="checkbox"]  + input[type="hidden"] +  label,
+input[type="radio"] + label {
+			
+	font-family: FontAwesome;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 200;
+	position: relative;
+    padding-left: 2.55em;
+	padding-right: 0.75em;
+           
+}
+
+input[type="checkbox"] +   input[type="hidden"] +  label:before,
+input[type="radio"] + label:before {
+      
+       
+        margin-top: -1%;
+		border-radius: 0;
+	   background-image: url('../../Images/unchecked.png');
+		content: '';
+		height: 1.3em;
+		left: 0;
+		line-height: 1.2em;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		width: 1.8em;
+}
+
+ input[type="checkbox"]:checked  + input[type="hidden"] + label:before
+ {
+     background-image: url('../../Images/checked.png');
+ }
+
+input[type="checkbox"] + input[type="hidden"] +  label:before,
+input[type="radio"] + label:before {
+
+    -webkit-transition: background 0.2s ease;
+    -moz-transition: background 0.2s ease;
+    -o-transition: background 0.2s ease;
+    -ms-transition: background 0.2s ease;
+    transition: background 0.2s ease;
+}
+
+input[type="checkbox"]:checked +  + input[type="hidden"] + label:before,
+input[type="radio"]:checked + label:before {
+    content: '\f00c';
+}
+
+input[type="radio"] + label:before {
+	border-radius: 100%;
+}

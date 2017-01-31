@@ -1,0 +1,49 @@
+﻿@model List<Apcis.ViewModels.ActiviteElementVM>
+@using Apcis.Models;
+@using Apcis.Html;
+@using Apcis.SiteLogic;
+<div id="update">
+    <section id="leftBar"></section>
+    <section id="rightBar"></section>
+
+    <section id="top">
+
+
+        <div class="fillChildren">
+            <img clas="logo" src="@Url.Content("~/Content/Images/logoBlocky.png")" />
+
+          
+        </div>
+        <footer>
+            @Html.Image(Url.Content("~/Content/images/h2long.png"))
+        </footer>
+    </section>
+
+    <br class="tinyBreak" />
+
+
+
+    <section class="inner">
+
+     
+            @{ViewData["count"] = Model.Count(); }
+            @(Html.Partial("CreateElement", Model, ViewData));
+        
+
+
+
+
+
+
+    </section>
+
+    <footer>@Html.Image(Url.Content("~/Content/images/h2long.png"))</footer>
+
+
+</div>
+@section scripts{
+
+
+}
+@*@Scripts.Render("~/bundles/scripts")*@
+@Scripts.Render("~/bundles/scripts")
